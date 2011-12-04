@@ -1,0 +1,2 @@
+module AlignmentCoreHelper
+end

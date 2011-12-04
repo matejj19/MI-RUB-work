@@ -1,0 +1,42 @@
+<h2>Zarovnání - vizualizace</h2>
+
+<table>
+<% jump = 60 %> <!-- Pocet pismen na radek -->
+<% actual = 0 %>
+<% while actual < @vis[0].size %>
+    <tr>
+      <td>
+        <%= @protein.id %>
+        <br/>
+        <%= @genome.name %>
+      </td>
+      <td><div class="align"><code>
+          <% for i in actual..actual+jump-1 %>
+            <% if @vis[0][i] == @vis[1][i] %>
+              <span class="red"><%=  @vis[0][i] %></span>
+            <% elsif @vis[0][i] == '-' or @vis[1][i] == '-' %>
+              <%=  @vis[0][i] %>
+            <% else %>
+              <span class="green"><%= @vis[0][i] %></span>
+            <% end %>
+          <% end %>
+          <br/>
+          <% for j in actual..actual+jump-1 %>
+            <% if @vis[0][j] == @vis[1][j] %>
+              <span class="red"><%=  @vis[1][j] %></span>
+            <% elsif @vis[0][j] == '-' or @vis[1][j] == '-' %>
+              <%=  @vis[1][j] %>
+            <% else %>
+              <span class="green"><%= @vis[1][j] %></span>
+            <% end %>
+          <% end %>
+      </code></div></td>
+      <td>
+        <%= actual %> - <%= [actual+jump-1, @vis[0].size].min %>
+      </td>
+    </tr>
+    <% actual += jump %>
+<% end %>
+</table>
+
+<h4>(Pro návrat k tabulce dosažených skóre použijte tlačítko Zpět v prohlížeči)</h4>

@@ -1,0 +1,32 @@
+<h2>Vkládání sekvencí k porovnání</h2>
+<h3>Dříve zadané sekvence</h3>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Sequence</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @genomes.each do |genome| %>
+  <tr>
+    <td><%= genome.name %></td>
+    <td><div class="td_sequence"><%= genome.sequence %></div></td>
+    <td><%= link_to '[Detail]', genome %></td>
+    <td><%= link_to '[Najít podobné sekvence]', {:action => 'align', 
+        :controller => 'alignment_core', :id => genome.id, :method => :unknown} %></td>
+    <td><%= link_to '[Upravit]', edit_genome_path(genome) %></td>
+    <td><%= link_to '[Odstranit]', genome, confirm: 'Opravdu?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to '[Zadat ručně novou sekvenci]', new_genome_path %>
+<h4>Nahrát sekvenci ze souboru</h4>
+<%= form_tag({:action => :create_from_file}, :multipart => true) do %>
+  <%= file_field_tag 'soubor' %>
+  <%= submit_tag "Nahrát" %>
+<% end %>

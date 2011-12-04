@@ -1,0 +1,27 @@
+<h2>Databáze proteinů</h2>
+<p>Databáze obsahuje <b><%= @proteins.size %></b> sekvencí</p>
+<h3>Načtené proteiny</h3>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Sequence</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @proteins.each do |protein| %>
+  <tr>
+    <td><%= protein.id %></td>
+    <td><div class="td_sequence"><%= protein.sequence %></div></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<h3>Nahrát DB ze souboru</h3>
+<%= form_tag({:action => :generate_db}, :multipart => true) do %>
+  <%= file_field_tag 'soubor' %>
+  <%= submit_tag "Nahrát" %>
+<% end %>

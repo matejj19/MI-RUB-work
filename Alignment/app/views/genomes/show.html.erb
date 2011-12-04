@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @genome.name %>
+</p>
+
+<p>
+  <b>Sequence:</b>
+  <div class="td_sequence"><%= @genome.sequence %></div>
+</p>
+
+<%= link_to '[Najít podobné sekvence]', {:action => 'align', 
+    :controller => 'alignment_core', :id => @genome.id, :method => :unknown} %> |
+<%= link_to '[Upravit]', edit_genome_path(@genome) %> |
+<%= link_to '[Zpět]', genomes_path %>

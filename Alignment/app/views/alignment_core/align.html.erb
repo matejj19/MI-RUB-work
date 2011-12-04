@@ -1,0 +1,39 @@
+<h2>Zarovnání</h2>
+
+<p>
+<%= link_to '[Lokální zarovnání]', {:action => 'align',
+    :id => @genome.id, :method => :local} %> |
+<%= link_to '[Globální zarovnání]', {:action => 'align',
+    :id => @genome.id, :method => :global} %> |
+<%= link_to '[Vybrat jiný genom]', {:action => 'index',
+    :controller => 'genomes'} %>
+</p>
+
+<p>Zvolený genom: <b><%= @genome.name %></b></p>
+
+<p>Počet sekvencí v DB k porovnání: <b><%= @proteins.size %></b></p>
+
+<% if @method != 'unknown' %>
+  <p>Zvolená metoda: <b><%= @message %></b></p>
+  <h4>Tabulka dosažených skóre (sekvence seřazené od nejvíce podobných k nejméně podobným)</h4>
+
+  <table>
+  <tr>
+    <th>Id</th>
+    <th>Skóre</th>
+    <th></th>
+  </tr>
+
+  <% @results.reverse_each do |ev_protein| %>
+  <tr>
+    <td><%= ev_protein.protein.id %></td>
+    <td><div class="align"><span class="red"><%= ev_protein.value %></span></div></td>
+    <td><%= link_to '[Ukázat zarovnání]', {:action => 'show_align',
+        :gid => @genome.id, :pid => ev_protein.protein.id, :method => @method} %></td>
+  </tr>
+  <% end %>
+  </table>
+
+<% else %>
+  <p><b>Zvolte metodu zarovnání</b></p>
+<% end  %>

@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  sequence: ATOKHAACCGGGTTTTTDFCDSCDSC
+
+two:
+  id: 2
+  sequence: ACGTMMTACCAGTRAT
