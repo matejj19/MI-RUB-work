@@ -1,0 +1,16 @@
+Thu, 05 Jan 2012 12:20:28 +0100
+./test/the_minimal_coverage/test_test_case.rb	Thu, 05 Jan 2012 11:53:51 +0100
+./test/the_minimal_coverage/test_configuration.rb	Thu, 05 Jan 2012 12:02:16 +0100
+./test/the_minimal_coverage/test_mc_solver.rb	Thu, 05 Jan 2012 12:15:49 +0100
+./LICENSE	Fri, 30 Dec 2011 18:27:21 +0100
+./README	Fri, 30 Dec 2011 18:27:21 +0100
+./nbproject/private/rake-d.txt	Thu, 05 Jan 2012 09:59:45 +0100
+./input1.txt	Fri, 30 Dec 2011 18:33:01 +0100
+./input2.txt	Thu, 05 Jan 2012 11:29:30 +0100
+./Rakefile	Fri, 30 Dec 2011 18:27:21 +0100
+./lib/the_minimal_coverage/segment.rb	Wed, 04 Jan 2012 17:57:04 +0100
+./lib/the_minimal_coverage/configuration.rb	Thu, 05 Jan 2012 10:49:52 +0100
+./lib/the_minimal_coverage/mc_solver.rb	Thu, 05 Jan 2012 11:19:39 +0100
+./lib/the_minimal_coverage/test_case.rb	Thu, 05 Jan 2012 10:44:27 +0100
+./lib/the_minimal_coverage/input_reader.rb	Tue, 03 Jan 2012 19:29:39 +0100
+./lib/the_minimal_coverage.rb	Tue, 03 Jan 2012 21:58:44 +0100
