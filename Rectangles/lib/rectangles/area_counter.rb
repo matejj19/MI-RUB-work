@@ -3,6 +3,7 @@ require_relative './rectangle'
 # Trida pocita obsah sjednoceni dvou ctvercu
 class AreaCounter
 
+  # Spocita obsah sjednoceni dvou ctvercu
   def self.count_area(rectangles)
     r1 = rectangles[0]
     r2 = rectangles[1]

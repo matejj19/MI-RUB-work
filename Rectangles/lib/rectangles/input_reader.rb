@@ -3,6 +3,7 @@ require_relative './rectangle'
 # Trida starajici se o nacteni vstupu
 class InputReader
 
+    # Nacte vstup
     def self.read_input
       first = read_rec("prvniho")
       second = read_rec("druheho")
@@ -11,6 +12,7 @@ class InputReader
     end
 
   private
+    # Nacte jeden ctverec
     def self.read_rec(poradi)
       rec = Rectangle.new
 

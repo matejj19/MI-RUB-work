@@ -16,10 +16,12 @@ class Rectangle
     @y_center = y_center
   end
 
+  # Vraci obsah ctverce
   def area
     delka_hrany * delka_hrany
   end
 
+  # Vraci delku poloviny hrany (strany ctverce)
   def pulka_hrany
     delka_hrany/2
   end

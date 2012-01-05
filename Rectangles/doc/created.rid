@@ -1,0 +1,10 @@
+Thu, 05 Jan 2012 12:24:38 +0100
+./test/rectangles/test_area_counter.rb	Fri, 18 Nov 2011 08:31:05 +0100
+./LICENSE	Mon, 14 Nov 2011 10:41:22 +0100
+./README	Mon, 14 Nov 2011 10:41:22 +0100
+./nbproject/private/rake-d.txt	Thu, 05 Jan 2012 09:59:36 +0100
+./Rakefile	Mon, 14 Nov 2011 10:41:22 +0100
+./lib/rectangles.rb	Fri, 18 Nov 2011 08:41:43 +0100
+./lib/rectangles/area_counter.rb	Thu, 05 Jan 2012 12:23:07 +0100
+./lib/rectangles/rectangle.rb	Thu, 05 Jan 2012 12:24:22 +0100
+./lib/rectangles/input_reader.rb	Thu, 05 Jan 2012 12:23:41 +0100
